@@ -65,15 +65,9 @@ module.exports = {
         test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
         use: [
           {
-            loader: "babel-loader"
-          },
-          {
-            loader: "react-svg-loader",
-            options: {
-              jsx: true // true outputs JSX tags
-            }
+            loader: "file-loader"
           }
-      ],
+        ],
       },
     ],
   },
