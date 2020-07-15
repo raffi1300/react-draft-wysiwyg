@@ -60,14 +60,12 @@ module.exports = {
           'css-loader',
         ],
       },
-      { test: /\.(png|jpg)$/, use: [{ loader: 'file-loader?limit=8192' }],  },
+      { test: /\.(png|jpg)$/, use: [{ loader: 'file-loader?limit=8192', options: {
+        outputPath: path.join(__dirname, '../dist/images')
+      } }],  },
       {
         test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-        use: [
-          {
-            loader: "file-loader"
-          }
-        ],
+        use: [{ loader: 'svg-inline-loader' }],
       },
     ],
   },
