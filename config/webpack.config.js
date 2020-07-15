@@ -65,7 +65,10 @@ module.exports = {
       } }],  },
       {
         test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-        use: [{ loader: 'svg-inline-loader' }],
+        use: [{ loader: 'file-loader' , options: {
+          outputPath: '/svg',
+          publicPath: '/dist/svg'
+        }}],
       },
     ],
   },

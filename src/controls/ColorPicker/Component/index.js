@@ -120,7 +120,6 @@ class LayoutComponent extends Component {
       >
         <Option onClick={onExpandEvent} className={classNames(className)}>
           <img src={icon} alt="" />
-          <div dangerouslySetInnerHTML={icon} />
         </Option>
         {expanded ? this.renderModal() : undefined}
       </div>
