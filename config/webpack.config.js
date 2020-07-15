@@ -63,7 +63,7 @@ module.exports = {
       { test: /\.(png|jpg)$/, use: [{ loader: 'url-loader?limit=8192' }] },
       {
         test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-        use: [{ loader: 'url-loader?limit=10000&mimetype=image/svg+xml' }],
+        use: [{ loader: 'svg-inline-loader' }],
       },
     ],
   },
