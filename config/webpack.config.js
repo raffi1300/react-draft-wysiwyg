@@ -60,7 +60,11 @@ module.exports = {
           'css-loader',
         ],
       },
-      { test: /\.(png|jpg)$/, use: [{ loader: 'url-loader?limit=8192' }] }
+      { test: /\.(png|jpg)$/, use: [{ loader: 'url-loader?limit=8192' }] },
+      {
+        test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+        use: [{ loader: 'svg-inline-loader' }],
+      }
     ],
   },
   resolve: {
