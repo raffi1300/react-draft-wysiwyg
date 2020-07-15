@@ -63,9 +63,17 @@ module.exports = {
       { test: /\.(png|jpg)$/, use: [{ loader: 'file-loader?limit=8192' }],  },
       {
         test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-        use: [{ loader: 'file-loader' , options: {
-          outputPath: '../dist/svg'
-        }}],
+        use: [
+          {
+            loader: "babel-loader"
+          },
+          {
+            loader: "react-svg-loader",
+            options: {
+              jsx: true // true outputs JSX tags
+            }
+          }
+      ],
       },
     ],
   },
