@@ -2,10 +2,12 @@
 .*node_modules*
 .*node_modules/fbjs.*
 .*/__test__/*
-./images/*.svg
+
 
 [include]
 .*/js/*
+.*/css/*
+./images/*.svg
 
 [libs]
 ./interfaces/mocha.js
